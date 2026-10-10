@@ -1,34 +1,107 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <link rel="stylesheet" type="text/css" href="assets/style.css">
-        <title>apinguen's journey | Stories</title>
-        <link rel="icon" type="image/x-icon" href="assets/favicon/favicon.ico">
-    </head>
-    <body>
-        <nav class="navbar">
-            <img src="assets/images/ProfileShadesTransparent.png" id="logo"/>
 
-            <ul class="navlinks">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Me</a></li>
-                <li><a href="stories.html">Stories</a></li>
-            </ul>
-        </nav>
+<head>
+    <link rel="stylesheet" type="text/css" href="assets/style.css">
+    <title>apinguen's journey | Stories</title>
+    <link rel="icon" type="image/x-icon" href="assets/favicon/favicon.ico">
+</head>
 
-        <div class="header">
-            <div><h2>About apinguen</h2></div>
+<body>
+    <div class="colorLightDiv hidden overlay" id="red"></div>
+    <div class="colorLightDiv hidden" id="orange"></div>
+    <div class="colorLightDiv hidden" id="yellow"></div>
+    <div class="colorLightDiv hidden" id="green"></div>
+    <div class="colorLightDiv hidden" id="blue"></div>
+    <div class="colorLightDiv hidden" id="indigo"></div>
+    <div class="colorLightDiv hidden" id="violet"></div>
+    <div class="overlay" id="overlay"></div>
+    <div id="discoBall" class="discoBall">🪩</div>
+    <div id="lights" class="lightContainer">
+        <div class="beam beamRed"></div>
+        <div class="beam beamBlue"></div>
+        <div class="beam beamGreen"></div>
+    </div>
+    <img src="assets/images/pinguDanceA.png" class="pinguDance hidden" id="pinguDance" />
+
+    <nav class="navbar">
+        <img src="assets/images/ProfileShadesTransparent.png" id="logo" class="discoButton"/>
+
+        <ul class="navlinks">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Me</a></li>
+            <li><a href="stories.html">Stories</a></li>
+        </ul>
+    </nav>
+
+    <div class="header">
+        <div>
+            <h2>About apinguen</h2>
         </div>
-        <div class="section">
-            <div class="content">
-                <h3>Some things about apinguen</h3>
-                <div>
-                    <p>
-                        mbti: INTJ-T <br>
-                        hobbies: coding (obviously), reading, Scouts, robotics, camping
-                    </p>
-                </div>
+    </div>
+    <div class="section">
+        <div class="content">
+            <h3>Some things about apinguen</h3>
+            <div>
+                <p>
+                    mbti: INTJ-T <br>
+                    hobbies: coding (obviously), reading, Scouts, robotics, camping <br>
+                    favorite color: blue <br>
+                    favorite food: not really one <br>
+                    favorite animals: orcas, penguins, otters <br>
+                    (theres more stuff on the stories page)
+
+                </p>
             </div>
         </div>
-    </body>
+    </div>
+    <script>
+        const lights = document.getElementsByClassName("colorLightDiv");
+        const audio = new Audio("assets/audio/danceModeTrimmed.mp3");
+        audio.loop = true;
+
+        function toggleDiscoMode() {
+            for (let i = 0; i < lights.length; i++) {
+                lights[i].classList.toggle("hidden");
+            }
+            document.getElementsByTagName("h2")[0].classList.toggle("disco");
+            document.getElementById("overlay").classList.toggle("visible");
+            document.getElementById("discoBall").classList.toggle("dropped");
+            document.getElementById("lights").classList.toggle("on");
+            document.getElementById("pinguDance").classList.toggle("hidden");
+            if (audio.paused) {
+                audio.play();
+            } else {
+                audio.pause();
+                audio.currentTime = 0;
+            }
+            console.log("Disco mode toggled");
+        }
+
+        document.getElementsByClassName("discoButton")[0].addEventListener("click", () => {
+            toggleDiscoMode();
+        });
+        const img = document.getElementById("pinguDance");
+        const frames = ["assets/images/pinguDanceA.png", "assets/images/pinguDanceB.png"];
+        let current = 0;
+
+        setInterval(() => {
+            current = (current + 1) % frames.length;
+            img.src = frames[current];
+        }, 1000 * (60 / 136));
+
+        for (let i = 0; i < lights.length; i++) {
+            lights[i].animate([
+                { opacity: '0' },
+                { opacity: '1' }
+            ], {
+                duration: 1000 + Math.random() * 1000,
+                iterations: Infinity,
+                direction: "alternate",
+                iterationStart: Math.random() * 1000,
+            });
+        }
+    </script>
+</body>
+
 </html>

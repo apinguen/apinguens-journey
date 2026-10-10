@@ -117,6 +117,18 @@ li {
     border-radius: 10px;
 }
 
+.storyImageS {
+    height: 200px;
+    width: auto;
+    border-radius: 10px;
+}
+
+.storyVideo {
+    height: 250px;
+    width: auto;
+    border-radius: 10px;
+}
+
 .flexy {
     display: flex;
 }
@@ -133,11 +145,12 @@ li {
 
 .imageBoxM {
     margin: 0 auto;
+    padding: 10px;
 }
 
 .caption {
     font-style: italic;
-    font-size: 90%;
+    font-size: 70%;
     text-align: center;
 }
 
@@ -154,4 +167,138 @@ li {
 #logo {
     width: 5rem;
     flex: 1;
+}
+
+.disco {
+  color:black;
+
+  animation: anim 3s;
+  animation-timing-function: linear;
+  animation-iteration-count:infinite;
+  z-index: 1003;
+}
+
+@keyframes anim {
+    0%{text-shadow:-6px 4px 0px red; text-color: green;}
+    10% {text-shadow:4px -6px 0px green; text-color: red;}
+    20% {text-shadow:-9px 4px 0px blue; text-color: yellow;}
+    30% {text-shadow:4px -6px 0px yellow; text-color: blue;}
+    40% {text-shadow:-8px 4px 0px orange; text-color: purple;}
+    50% {text-shadow:4px 5px 0px purple; text-color: orange;}
+    60% {text-shadow:-6px 4px 0px brown; text-color: white;}
+    70% {text-shadow:4px 7px 0px pink; text-color: black;}
+    80% {text-shadow:-9px -4px 0px lime; text-color: orange;}
+    90% {text-shadow:4px -6px 0px cyan; text-color: orange;}
+    100% {text-shadow:-9px 4px 0px teal; text-color: white;}
+} 
+
+.colorLightDiv {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    pointer-events: none;
+}
+
+.hidden {
+    display: none;
+}
+
+.overlay {
+    position: fixed;
+    inset: 0;
+    background: black;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 5s ease;
+}
+
+.overlay.visible {
+    opacity: .7;
+}
+
+#red {
+  background: radial-gradient(circle at 0% 100%, rgba(255,0,0,1) 0%, rgba(0,0,0,0) 50%); 
+}
+
+#orange {
+  background: radial-gradient(circle at 40% 100%, rgba(255,125,0,1) 0%, rgba(0,0,0,0) 50%); 
+}
+
+#yellow {
+  background: radial-gradient(circle at 80% 100%, rgba(255,255,0,1) 0%, rgba(0,0,0,0) 50%); 
+}
+
+#green {
+  background: radial-gradient(circle at 0% 100%, rgba(0,255,0,1) 0%, rgba(0,0,0,0) 50%); 
+}
+
+#blue {
+  background: radial-gradient(circle at 40% 100%, rgba(0,0,255,1) 0%, rgba(0,0,0,0) 50%); 
+}
+
+#indigo {
+  background: radial-gradient(circle at 80% 100%, rgba(0,125,255,1) 0%, rgba(0,0,0,0) 50%); 
+}
+
+#violet {
+  background: radial-gradient(circle at 80% 100%, rgba(255,0,125,1) 0%, rgba(0,0,0,0) 50%); 
+}
+
+.discoBall {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -100%);
+    font-size: 100px;
+    transition: transform 0.8s ease;
+    pointer-events: none;
+    z-index: 1001;
+}
+
+.discoBall.dropped {
+    transform: translate(-50%, 0px);
+    transition: transform 0.8s cubic-bezier(0.34, 1.56, 0.64, 1);
+    animation: spin 4s linear infinite;
+}
+
+@keyframes spin { to { rotate: 360deg; } }
+
+.lightContainer {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.lightContainer.on {
+    opacity: 1;
+}
+
+.beam {
+    position: absolute;
+    top: -10%;
+    width: 40vmax;
+    height: 100vmax;
+    transform-origin: top center;
+    z-index: 1000;
+}
+
+.beamRed   { left: 10%; background: linear-gradient(rgba(255,0,80,0.8), transparent 70%);   animation: sweep 4s ease-in-out infinite alternate; }
+.beamBlue  { left: 40%; background: linear-gradient(rgba(0,150,255,0.8), transparent 70%);  animation: sweep 5s ease-in-out infinite alternate-reverse; }
+.beamGreen { left: 65%; background: linear-gradient(rgba(0,255,120,0.8), transparent 70%);  animation: sweep 6s ease-in-out infinite alternate; }
+
+@keyframes sweep {
+    from { transform: rotate(-30deg); }
+    to   { transform: rotate(30deg); }
+}
+
+.pinguDance {
+    position: absolute;
+    z-index: 1002;
+    width: 50%;
+    height: 75%;
+    pointer-events: none;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
