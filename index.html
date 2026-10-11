@@ -23,7 +23,7 @@
     <img src="assets/images/pinguDanceA.png" class="pinguDance hidden" id="pinguDance" />
 
         <nav class="navbar">
-            <img src="assets/images/ProfileCameraTransparent.png" id="logo"/>
+            <img src="assets/images/ProfileCameraTransparent.png" id="logo" class="discoButton"/>
 
             <ul class="navlinks">
                 <li><a href="index.html">Home</a></li>
@@ -59,6 +59,7 @@
                 lights[i].classList.toggle("hidden");
             }
             document.getElementsByTagName("h2")[0].classList.toggle("disco");
+            document.getElementsByTagName("h2")[1].classList.toggle("disco");
             document.getElementById("overlay").classList.toggle("visible");
             document.getElementById("discoBall").classList.toggle("dropped");
             document.getElementById("lights").classList.toggle("on");
