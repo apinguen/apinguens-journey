@@ -1,2 +1,5 @@
-THIS IS NOT COMPLETE YET
-I'm in the progress of making this for the Bento YSWS, but I thought I would submit this to be approved for Boba Drops since it meets the requirements as-is.
+A personal website for myself, designed to share some stories and facts about me.
+Concept inspired by my friend's page, which you can find at https://kimvurly.github.io/who-is-kimberly/.
+
+Something might happen of you click on the images
+the small ones
