@@ -264,6 +264,7 @@ Minor
         const lights = document.getElementsByClassName("colorLightDiv");
         const audio = new Audio("assets/audio/danceModeTrimmed.mp3");
         audio.loop = true;
+        audio.volume = 0.03;
 
         function toggleDiscoMode() {
             for (let i = 0; i < lights.length; i++) {
