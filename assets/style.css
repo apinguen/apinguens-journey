@@ -51,6 +51,9 @@ li {
     margin: 0 10px;
 }
 
+/*
+    Navigation bar stuff
+*/
 .navbar {
     background-color: var(--border-color);
     display: flex;
@@ -111,6 +114,10 @@ li {
     margin-left: 5px;
 }
 
+/*
+ Story stuff
+*/
+
 .storyImage {
     height: 250px;
     width: auto;
@@ -168,6 +175,10 @@ li {
     width: 5rem;
     flex: 1;
 }
+
+/*
+    Disco stuff
+*/
 
 .disco {
   color:black;
@@ -301,4 +312,39 @@ li {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+/*
+    Photo portfolio stuff
+*/
+.gallery {
+    margin: 0 auto;
+}
+
+.gallerySectionHeading {
+    text-align: left;
+    font-size: 30pt;
+}
+
+.gallerySectionDescription {
+    text-align: left;
+    font-size: 20pt;
+}
+
+.galleryDiv {
+    width: 95%;
+    padding-bottom: 2%;
+}
+
+.galleryPhoto {
+    width: 26rem;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    display: block;
+}
+
+.galleryPhotoCaption {
+    font-style: italic;
+    font-size: small;
+    text-align: center;
 }
