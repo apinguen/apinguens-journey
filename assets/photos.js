@@ -40,7 +40,7 @@ for (let i = 1; i < 10; i++) {
 categories.push({
     id: 'stars',
     name: 'Stars',
-    description: 'Emerson Scout Camp'
+    description: 'Shiny things in the sky'
 })
 for (let i = 1; i < 4; i++) {
     let photo = {
