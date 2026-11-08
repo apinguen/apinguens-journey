@@ -1,198 +1,93 @@
 const rowLength = 4;
 
-const categories = [
-    {
-        id: 'philmont',
-        name: 'Philmont',
-        description: 'Philmont Scout Ranch, Cimarron, NM',
-        coverPhoto: ''
-    },
-    {
-        id: 'robotics',
-        name: 'Robotics',
-        description: 'Beep boop',
-        coverPhoto: ''
-    },
+const categories = []
 
-]
+const photos = []
 
-const photos = [
-    {
-        src: 'assets/images/photography/philmont/1/1.jpg',
-        alt: '',
-        caption: '',
+categories.push({
+    id: 'philmont',
+    name: 'Philmont',
+    description: 'very long walk in middle of nowhere'
+})
+for (let i = 1; i < 10; i++) {
+    let photo = {
+        src: 'assets/images/photography/philmont/1/' + i + ".jpg",
         category: 'philmont'
-    },
-    {
-        src: 'assets/images/photography/philmont/1/2.jpg',
-        alt: '',
-        caption: '',
+    }
+    photos.push(photo);
+}
+for (let i = 1; i < 10; i++) {
+    let photo = {
+        src: 'assets/images/photography/philmont/2/' + i + ".jpg",
         category: 'philmont'
-    },
-    {
-        src: 'assets/images/photography/philmont/1/3.jpg',
-        alt: '',
-        caption: '',
-        category: 'philmont'
-    },
-    {
-        src: 'assets/images/photography/philmont/1/4.jpg',
-        alt: '',
-        caption: '',
-        category: 'philmont'
-    },
-    {
-        src: 'assets/images/photography/philmont/1/5.jpg',
-        alt: '',
-        caption: '',
-        category: 'philmont'
-    },
-    {
-        src: 'assets/images/photography/philmont/1/6.jpg',
-        alt: '',
-        caption: '',
-        category: 'philmont'
-    },
-     {
-        src: 'assets/images/photography/philmont/1/7.jpg',
-        alt: '',
-        caption: '',
-        category: 'philmont'
-    },
-    {
-        src: 'assets/images/photography/philmont/1/8.jpg',
-        alt: '',
-        caption: '',
-        category: 'philmont'
-    },
-    {
-        src: 'assets/images/photography/philmont/1/9.jpg',
-        alt: '',
-        caption: '',
-        category: 'philmont'
-    },
-    {
-        src: 'assets/images/photography/philmont/1/10.jpg',
-        alt: '',
-        caption: '',
-        category: 'philmont'
-    },
-    {
-        src: 'assets/images/photography/philmont/2/1.jpg',
-        alt: '',
-        caption: '',
-        category: 'philmont'
-    },
-    {
-        src: 'assets/images/photography/philmont/2/2.jpg',
-        alt: '',
-        caption: '',
-        category: 'philmont'
-    },
-     {
-        src: 'assets/images/photography/philmont/2/3.jpg',
-        alt: '',
-        caption: '',
-        category: 'philmont'
-    },
-    {
-        src: 'assets/images/photography/philmont/2/4.jpg',
-        alt: '',
-        caption: '',
-        category: 'philmont'
-    },
-    {
-        src: 'assets/images/photography/philmont/2/5.jpg',
-        alt: '',
-        caption: '',
-        category: 'philmont'
-    },
-    {
-        src: 'assets/images/photography/philmont/2/6.jpg',
-        alt: '',
-        caption: '',
-        category: 'philmont'
-    },
-    {
-        src: 'assets/images/photography/philmont/2/7.jpg',
-        alt: '',
-        caption: '',
-        category: 'philmont'
-    },
-    {
-        src: 'assets/images/photography/philmont/2/8.jpg',
-        alt: '',
-        caption: '',
-        category: 'philmont'
-    },
-    {
-        src: 'assets/images/photography/philmont/2/9.jpg',
-        alt: '',
-        caption: '',
-        category: 'philmont'
-    },
-    {
-        src: 'assets/images/photography/philmont/2/10.jpg',
-        alt: '',
-        caption: '',
-        category: 'philmont'
-    },
-    {
-        src: 'assets/images/photography/robotics/1.jpg',
-        alt: '',
-        caption: '',
+    }
+    photos.push(photo);
+}
+
+categories.push({
+    id: 'robotics',
+    name: 'Robotics',
+    description: 'Beep boop'
+})
+for (let i = 1; i < 10; i++) {
+    let photo = {
+        src: 'assets/images/photography/robotics/' + i + ".jpg",
         category: 'robotics'
-    },
-    {
-        src: 'assets/images/photography/robotics/2.jpg',
-        alt: '',
-        caption: '',
-        category: 'robotics'
-    },
-    {
-        src: 'assets/images/photography/robotics/3.jpg',
-        alt: '',
-        caption: '',
-        category: 'robotics'
-    },
-    {
-        src: 'assets/images/photography/robotics/4.jpg',
-        alt: '',
-        caption: '',
-        category: 'robotics'
-    },
-    {
-        src: 'assets/images/photography/robotics/5.jpg',
-        alt: '',
-        caption: '',
-        category: 'robotics'
-    },
-    {
-        src: 'assets/images/photography/robotics/6.jpg',
-        alt: '',
-        caption: '',
-        category: 'robotics'
-    },
-    {
-        src: 'assets/images/photography/robotics/7.jpg',
-        alt: '',
-        caption: '',
-        category: 'robotics'
-    },
-    {
-        src: 'assets/images/photography/robotics/8.jpg',
-        alt: '',
-        caption: '',
-        category: 'robotics'
-    },
-    {
-        src: 'assets/images/photography/robotics/9.jpg',
-        alt: '',
-        caption: '',
-        category: 'robotics'
-    },
-    
-]
+    }
+    photos.push(photo);
+}
+
+categories.push({
+    id: 'stars',
+    name: 'Stars',
+    description: 'Emerson Scout Camp'
+})
+for (let i = 1; i < 4; i++) {
+    let photo = {
+        src: 'assets/images/photography/stars/' + i + ".jpg",
+        category: 'stars'
+    }
+    photos.push(photo);
+}
+
+categories.push({
+    id: 'rockymountains',
+    name: 'Rocky Mountains',
+    description: 'Snowy big rocks'
+})
+for (let i = 1; i < 10; i++) {
+    let photo = {
+        src: 'assets/images/photography/rockymountains/' + i + ".png",
+        category: 'rockymountains'
+    }
+    photos.push(photo);
+}
+
+categories.push({
+    id: 'seals',
+    name: 'Seals',
+    description: 'Ceilings somewhere in Monterey'
+})
+for (let i = 1; i < 4; i++) {
+    let photo = {
+        src: 'assets/images/photography/seals/' + i + ".jpg",
+        category: 'seals'
+    }
+    photos.push(photo);
+}
+
+categories.push({
+    id: 'arches',
+    name: 'Arches',
+    description: 'Rock with hole'
+})
+for (let i = 1; i < 10; i++) {
+    let photo = {
+        src: 'assets/images/photography/arches/' + i + ".png",
+        category: 'arches'
+    }
+    photos.push(photo);
+}
 
 let html = "";
 
@@ -210,9 +105,7 @@ for (let i = 0; i < categories.length; i++) {
                 categoryHtml += "<tr>"
             }
             categoryHtml += "<td><div class='galleryPhotoCard'> <img class='galleryPhoto' src='" + photos[j].src + "' /> </div>";
-            if (photos[j].caption != "") {
-                categoryHtml += "<div class='galleryPhotoCaption'><p>" + photos[j].caption + "</p></div>";
-            }
+            
             categoryHtml += "</td>";
             photosInRow++;
             if (photosInRow == rowLength - 1) {
